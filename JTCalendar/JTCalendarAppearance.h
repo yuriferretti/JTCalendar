@@ -29,9 +29,6 @@ typedef NSString *(^JTCalendarMonthBlock)(NSDate *date, JTCalendar *jt_calendar)
 
 @property (assign, nonatomic) CGFloat ratioContentMenu;
 @property (assign, nonatomic) BOOL autoChangeMonth;
-@property (assign, nonatomic) BOOL autoDissolveMenu;
-@property (assign, nonatomic) CGFloat autoDissolveMinAlpha;
-@property (assign, nonatomic) CGFloat autoDissolveMaxAlpha;
 
 @property (nonatomic, copy) JTCalendarMonthBlock monthBlock;
 
@@ -60,7 +57,10 @@ typedef NSString *(^JTCalendarMonthBlock)(NSDate *date, JTCalendar *jt_calendar)
 @property (strong, nonatomic) UIColor *dayTextColorToday;
 @property (strong, nonatomic) UIColor *dayTextColorTodayOtherMonth;
 
-@property (strong, nonatomic) UIFont *dayTextFont;
+@property (strong, nonatomic) UIColor *todayTextColor;
+@property (strong, nonatomic) UIFont  *todayTextFont;
+@property (strong, nonatomic) UIFont  *dayTextFont;
+@property (strong, nonatomic) UIFont  *selectedDayFont;
 
 @property (strong, nonatomic) NSString *dayFormat;
 

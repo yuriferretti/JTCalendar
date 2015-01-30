@@ -17,7 +17,7 @@
     if(!self){
         return nil;
     }
-        
+    
     [self setDefaultValues];
     
     return self;
@@ -34,19 +34,17 @@
     self.ratioContentMenu = 2.;
     self.autoChangeMonth = YES;
     
-    self.autoDissolveMenu = YES;
-    self.autoDissolveMinAlpha = 0.1;
-    self.autoDissolveMaxAlpha = 1.0;
-    
     self.dayCircleRatio = 1.;
     self.dayDotRatio = 1. / 9.;
     
     self.menuMonthTextFont = [UIFont systemFontOfSize:17.];
     self.weekDayTextFont = [UIFont systemFontOfSize:11];
     self.dayTextFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
-
+    self.todayTextFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    self.selectedDayFont = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    
     self.dayFormat = @"dd";
-
+    
     // Day Background and Border
     self.dayBackgroundColor = [UIColor clearColor];
     self.dayBorderWidth = 0.0f;
@@ -59,7 +57,8 @@
     [self setDayTextColorForAll:[UIColor blackColor]];
     
     self.dayTextColorOtherMonth = [UIColor colorWithRed:152./256. green:147./256. blue:157./256. alpha:1.];
-
+    self.todayTextColor = self.dayTextColor;
+    
     self.dayCircleColorSelected = [UIColor redColor];
     self.dayTextColorSelected = [UIColor whiteColor];
     self.dayDotColorSelected = [UIColor whiteColor];
